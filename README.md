@@ -4,4 +4,4 @@
 
 #### Sign Up with Facebook
 [facebook.webm](https://github.com/nahedshehata/socialSignUP/assets/109394234/ad7a2e1f-b043-490b-8c9d-905e5f77511a)
-<img src="https://media3.giphy.com/media/WFZvB7VIXBgiz3oDXE/giphy.gif"  width="30px" height ="30px">&nbsp;
+
