@@ -1,6 +1,9 @@
+
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->middleware('auth');
+
+// Google login
+Route::get('login/google', [App\Http\Controllers\Auth\LoginController::class, 'redirect'])->name('login.google');
+Route::get('login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+
+// facebook login
+Route::get('auth/facebook', [App\Http\Controllers\Auth\LoginController::class, 'redirectFacebook'])->name('auth.facebook');
+Route::get('auth/facebook/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleFacebookCallback']);
