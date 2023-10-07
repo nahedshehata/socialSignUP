@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Setting Up Laravel with Socialite</title>
 </head>
 <body>
     <h1>Setting Up Laravel with Socialite</h1>
